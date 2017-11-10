@@ -4,7 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 const buttonStyle = {
     margin: 12,
-  };
+};
 
 const buttonAttributes = {
     label: "Add",
@@ -18,9 +18,11 @@ class AddItem extends Component {
             <div>
                 <h2>Add item</h2>
                 <TextField
-                    hintText="Item name"
+                    hintText={this.props.inputValue}
+                    onChange={this.props.handleInputChange}
+                    value={this.props.inputValue}
                 />
-                <RaisedButton {...buttonAttributes} />
+                <RaisedButton {...buttonAttributes} onClick={this.props.addItem} />
             </div>
         );
     }

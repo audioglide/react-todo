@@ -4,7 +4,19 @@ body {
   font-family: sans-serif;
 }
 
-.td-container{
+.todo-container{
   display:flex;
   justify-content: center;
+  padding:50px;
+}
+.todo-list{
+  padding: 20px;
+  border:1px dashed #ccc;
+}
+.todo-warning{
+  color:#ff0000;
+}
+
+.user-profile img{
+  width: 20%;
 }
