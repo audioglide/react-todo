@@ -26,8 +26,8 @@ class TodoList extends Component {
         super()
         this.addItem = this.addItem.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.login = this.login.bind(this);
-        this.logout = this.logout.bind(this);
+        // this.login = this.login.bind(this);
+        // this.logout = this.logout.bind(this);
         this.state = {
             user: '',
             value: '',
@@ -84,7 +84,7 @@ class TodoList extends Component {
         console.log(item.key);
     }
 
-    login() {
+    login = () => {
         auth.signInWithPopup(provider)
             .then((result) => {
                 const user = result.user;
@@ -94,7 +94,7 @@ class TodoList extends Component {
             });
     }
 
-    logout() {
+    logout = () => {
         auth.signOut()
             .then(() => {
                 this.setState({
